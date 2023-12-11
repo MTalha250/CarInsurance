@@ -1,35 +1,25 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import { navLinks } from "@/constants";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+import { NavigationMenu } from "@/components/ui/navigation-menu";
+
+import Link from "next/link";
 
 const Navbar = () => {
   return (
     <div className="px-16 py-5 shadow flex justify-between w-full bg-white items-center">
-      <h1 className="font-extrabold text-2xl">Car Insurance.</h1>
+      <h1 className="font-bold text-red-600 text-2xl">Car Insurance Co.</h1>
 
-      <NavigationMenu>
-        <NavigationMenuList>
-          {navLinks.map((item) => (
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-              <NavigationMenuContent className="p-5 flex flex-col">
-                <NavigationMenuLink>Link</NavigationMenuLink>
-                <NavigationMenuLink>Link</NavigationMenuLink>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          ))}
-          <NavigationMenuItem>Log In</NavigationMenuItem>
-        </NavigationMenuList>
+      <NavigationMenu
+      className="flex gap-5 py-2"
+      >
+        {navLinks.map((navLink, index) => (
+          <Link href={navLink.title} key={index}>
+            <p
+            className="cursor-pointer hover:text-red-500 transition-all"
+            >{navLink.title}</p>
+          </Link>
+        ))}
       </NavigationMenu>
     </div>
   );

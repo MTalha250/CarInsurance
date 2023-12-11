@@ -1,16 +1,18 @@
 import React from "react";
+import caranim3 from "@/assets/caranim3.gif"
 
 const Four = () => {
   return (
-    <div className="flex justify-center items-center px-16 my-20">
+    <div className="flex justify-center items-center px-16 my-20 border-t">
       <div className="w-1/3">
-        <h1 className="text-3xl font-bold">Buy Now Pay Later With Tabby</h1>
+        <h1 className="text-3xl font-semibold mb-2">Personal Accident Coverage</h1>
         <p>
-          We are proud partners with Tabby where you can buy your car insurance
-          now and pay later in installments
+        Provides additional financial protection against personal injuries for the driver and passengers in the event of an accident.
         </p>
       </div>
-      <div className="w-1/3 bg-black h-[50vh]"></div>
+      <div className="w-1/3 bg-black h-[50vh]">
+        <img src={caranim3.src} alt="caranim3" className="w-full h-full object-cover" />
+      </div>
     </div>
   );
 };

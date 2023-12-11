@@ -8,7 +8,4 @@ export const navLinks = [
   {
     title: "Support",
   },
-  {
-    title: "Login",
-  },
 ];

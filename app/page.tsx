@@ -4,6 +4,8 @@ import Three from "@/components/Home/Three";
 import Two from "@/components/Home/Two";
 import Five from "@/components/Home/Five";
 import Six from "@/components/Home/Six";
+import Services from "@/components/Home/Services";
+import Contact from "@/components/Home/Contact";
 
 export default function Home() {
   return (
@@ -13,7 +15,8 @@ export default function Home() {
       <Three />
       <Four />
       <Five />
-      <Six />
+      {/* <Six /> */}
+      <Contact />
     </div>
   );
 }
